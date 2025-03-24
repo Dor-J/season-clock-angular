@@ -62,8 +62,8 @@ async function _createSeason() {
   ];
 
   const date: Date = new Date();
-  const month = monthNames[date.getMonth()];
-  const dayOfWeek = dayNames[date.getDay()];
+  const month: string = monthNames[date.getMonth()];
+  const dayOfWeek: string = dayNames[date.getDay()];
 
   const year = date.getFullYear();
 
