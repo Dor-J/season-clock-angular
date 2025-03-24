@@ -6,13 +6,16 @@
   <section class="season-clock-cmps">
     <div class="season-clock-card">
       <div class="card-title">
-        <span class="title-month">December</span>
-        <span class="title-season">(Winter)</span>
+        <span class="title-month">{{ timeObj.month }}</span>
+        <span class="title-season">({{ timeObj.season }})</span>
       </div>
       <div class="season-img-container">
-        <img ng-src="../app/assets/imgs/winter.png" alt="season-image" />
+        <img
+          [src]="'assets/imgs/' + timeObj.season.toLowerCase() + '.png'"
+          alt="season-image"
+        />
       </div>
-      <span class="card-day">Saturday</span>
+      <span class="card-day">{{ timeObj.dayOfWeek }}</span>
     </div>
   </section>
   <button (click)="onToggleTheme()">Toggle Theme</button>
