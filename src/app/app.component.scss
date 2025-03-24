@@ -3,6 +3,9 @@
   --bright-blue1: #01008c;
   --bright-blue-1: #aed8e6;
 
+  --clr-black: #000;
+  --clr-white: #fff;
+
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -11,42 +14,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: -0.125rem;
-  margin: 0;
-  font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-}
-
-p {
-  margin: 0;
-}
-
 main {
   width: 100%;
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  box-sizing: inherit;
-  position: relative;
-}
+  padding: 1em;
 
-@media screen and (max-width: 650px) {
-  .content {
-    flex-direction: column;
-    width: max-content;
+  header {
+    padding: 0.5em;
+    margin-block-end: 0.5em;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 100%;
+    }
   }
 
-  .divider {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
+  .season-clock-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
   }
 }
