@@ -39,6 +39,22 @@
   >
     Toggle Theme
   </button>
+
+  <section class="clock-section">
+    <div class="clock-container">
+      <span class="hours"
+        >{{ clock.hour <= 9 ? "0" : "" }}{{ clock.hour }}</span
+      >
+      <span>:</span>
+      <span class="minutes"
+        >{{ clock.minute <= 9 ? "0" : "" }}{{ clock.minute }}</span
+      >
+      <span>:</span>
+      <span class="seconds"
+        >{{ clock.second <= 9 ? "0" : "" }}{{ clock.second }}</span
+      >
+    </div>
+  </section>
 </main>
 
 <router-outlet />
