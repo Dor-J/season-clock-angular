@@ -1,7 +1,15 @@
+@use "sass:color";
+
+$bright-blue: #299dda;
+$bright-green: #67af48;
+$bright-yellow: #fdc429;
+$dark-purple: #434fa0;
+
 :host {
   --bright-blue: #299dda;
-  --bright-blue1: #01008c;
-  --bright-blue-1: #aed8e6;
+  --bright-green: #67af48;
+  --bright-yellow: #fdc429;
+  --dark-purple: #434fa0;
 
   --clr-black: #000;
   --clr-white: #fff;
@@ -21,6 +29,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
   padding: 1em;
 
   header {
@@ -39,6 +48,44 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
     padding: 0.5em;
+
+    color: var(--clr-black);
+
+    &.winter {
+      background: color.adjust($color: $bright-blue, $lightness: 20%);
+      &.dark {
+        background: color.adjust($color: $bright-blue, $lightness: -20%);
+      }
+    }
+
+    &.summer {
+      background-color: color.adjust($color: $bright-yellow, $lightness: -20%);
+      &.dark {
+        background-color: color.adjust(
+          $color: $bright-yellow,
+          $lightness: -20%
+        );
+      }
+    }
+
+    &.autumn {
+      background-color: color.adjust($color: $dark-purple, $lightness: 20%);
+      &.dark {
+        background-color: color.adjust($color: $dark-purple, $lightness: -20%);
+      }
+    }
+
+    &.spring {
+      background-color: color.adjust($color: $bright-green, $lightness: 20%);
+      &.dark {
+        background-color: color.adjust($color: $bright-green, $lightness: -20%);
+      }
+    }
+
+    &.dark {
+      color: var(--clr-white);
+    }
   }
 }
