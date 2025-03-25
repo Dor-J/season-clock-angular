@@ -161,4 +161,29 @@ main {
       }
     }
   }
+
+  .clock-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-clr-secondary);
+
+    padding: 1em;
+    border-radius: 2px;
+
+    .clock-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2em;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      transition: scale 0.22s ease-in;
+      &:hover {
+        scale: 1.04;
+      }
+    }
+  }
 }
