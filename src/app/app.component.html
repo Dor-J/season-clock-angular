@@ -27,7 +27,18 @@
       <span class="card-day">{{ timeObj.dayOfWeek }}</span>
     </div>
   </section>
-  <button (click)="onToggleTheme()">Toggle Theme</button>
+  <button
+    (click)="onToggleTheme()"
+    class="btn-theme-toggle"
+    [ngClass]="{
+      winter: timeObj.season.toLowerCase() === 'winter',
+      summer: timeObj.season.toLowerCase() === 'summer',
+      autumn: timeObj.season.toLowerCase() === 'autumn',
+      spring: timeObj.season.toLowerCase() === 'spring'
+    }"
+  >
+    Toggle Theme
+  </button>
 </main>
 
 <router-outlet />
