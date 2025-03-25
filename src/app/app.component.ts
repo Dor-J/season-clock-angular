@@ -32,7 +32,6 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     this.intervalId = setInterval(() => this.updateTime(), 1000);
-    console.log('intervalId', this.intervalId);
   }
 
   clock: Clock = {
@@ -42,11 +41,6 @@ export class AppComponent implements OnInit, OnDestroy {
   };
   second: number = 0;
   updateTime(): void {
-    // () => {
-    //   // let newtime = (this.clock.second += 1);
-    //   // this.clock = { ...this.clock, second: newtime };
-    //   this.second++;
-    // };
     let currSecond: number = (this.clock.second += 1);
     let prevTime: Clock = this.clock;
     if (prevTime.minute >= 60) {
@@ -61,7 +55,6 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     this.clock = { ...this.clock, ...prevTime };
-    console.log('second', this.clock.second);
   }
 
   ngOnDestroy() {
