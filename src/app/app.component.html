@@ -4,7 +4,16 @@
   </header>
 
   <section class="season-clock-cmps">
-    <div class="season-clock-card">
+    <div
+      class="season-clock-card"
+      [class.dark]="isDark"
+      [ngClass]="{
+        winter: timeObj.season.toLowerCase() === 'winter',
+        summer: timeObj.season.toLowerCase() === 'summer',
+        autumn: timeObj.season.toLowerCase() === 'autumn',
+        spring: timeObj.season.toLowerCase() === 'spring'
+      }"
+    >
       <div class="card-title">
         <span class="title-month">{{ timeObj.month }}</span>
         <span class="title-season">({{ timeObj.season }})</span>
